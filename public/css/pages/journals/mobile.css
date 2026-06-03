@@ -1,0 +1,204 @@
+﻿@media (max-width: 575.98px) {
+    .journal-page-row {
+        padding-top: 0.75rem !important;
+    }
+
+    .journal-list-card,
+    .journal-editor-card {
+        border-radius: 1.15rem !important;
+    }
+
+    .journal-list-card .card-body,
+    .journal-editor-card > .card-body {
+        padding: 0.95rem !important;
+    }
+
+    .journal-list-card .card-body > .d-flex:first-child {
+        gap: 0.75rem;
+        margin-bottom: 0.85rem !important;
+    }
+
+    .journal-list-card .card-body > .d-flex:first-child h6 {
+        min-width: 0;
+        font-size: 1rem;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    .journal-create-btn {
+        flex: 0 0 auto;
+        min-height: 36px;
+        padding: 0.45rem 0.75rem !important;
+        font-size: 0.78rem !important;
+        line-height: 1.1 !important;
+    }
+
+    .journal-inline-filter-form {
+        margin-bottom: 0.9rem !important;
+    }
+
+    .journal-inline-filter-form .input-group {
+        border-radius: 0.9rem !important;
+    }
+
+    .journal-inline-filter-form input[name="search"] {
+        min-height: 42px;
+        font-size: 0.9rem;
+    }
+
+    .journal-filter-row input[name="date"] {
+        min-width: 0;
+        font-size: 0.82rem;
+        box-shadow: none !important;
+    }
+
+    .journal-filter-row .journal-filter-btn,
+    .journal-filter-row a {
+        padding-left: 0.8rem !important;
+        padding-right: 0.8rem !important;
+    }
+
+    .journal-list-wrap {
+        gap: 0.55rem !important;
+        max-height: none;
+    }
+
+    .journal-item {
+        padding: 0.9rem !important;
+        border-color: var(--bs-border-color);
+        border-radius: 1rem !important;
+        background-color: var(--bs-body-bg);
+    }
+
+    .journal-title {
+        font-size: 0.92rem !important;
+    }
+
+    .journal-excerpt {
+        font-size: 0.8rem !important;
+        line-height: 1.35 !important;
+    }
+
+    .journal-editor-card > .card-body .border-bottom {
+        gap: 0.75rem;
+        padding-bottom: 0.85rem !important;
+        margin-bottom: 0 !important;
+    }
+
+    #editor-header-title {
+        font-size: 1.08rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 0.35rem !important;
+        overflow-wrap: anywhere;
+    }
+
+    #journalDatePicker {
+        font-size: 0.82rem !important;
+    }
+
+    #action-buttons {
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    #action-buttons .btn {
+        width: 38px;
+        height: 38px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important;
+        border-radius: 0.75rem !important;
+    }
+
+    .journal-editor-card #journalForm {
+        padding: 0 0.95rem 0.95rem !important;
+    }
+
+    .journal-editor-card label[for="journalTitle"] {
+        font-size: 0.84rem !important;
+        color: var(--bs-secondary-color) !important;
+        margin-bottom: 0.45rem !important;
+    }
+
+    #journalTitle {
+        min-height: 48px !important;
+        padding: 0.8rem 0.95rem !important;
+        border-radius: 0.9rem !important;
+        font-size: 1rem !important;
+        line-height: 1.2 !important;
+    }
+
+    #editor-container {
+        height: 240px !important;
+        min-height: 240px !important;
+    }
+
+    .ql-editor {
+        min-height: 240px !important;
+    }
+
+    .journal-pagination-wrap .page-link {
+        min-width: 2rem;
+        padding: 0.35rem 0.55rem;
+        font-size: 0.86rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .journal-list-card .card-body,
+    .journal-editor-card > .card-body {
+        padding: 0.85rem !important;
+    }
+
+    .journal-editor-card #journalForm {
+        padding: 0 0.85rem 0.85rem !important;
+    }
+
+    .journal-filter-row {
+        grid-template-columns: 1fr;
+    }
+
+    .journal-filter-row .btn,
+    .journal-filter-row input[type="date"],
+    .journal-filter-row a {
+        width: 100%;
+    }
+
+    .journal-create-btn {
+        padding: 0.42rem 0.65rem !important;
+        font-size: 0.74rem !important;
+    }
+
+    #editor-header-title {
+        font-size: 1.02rem !important;
+    }
+
+    .ql-toolbar.ql-snow {
+        gap: 0.3rem !important;
+        padding: 0.5rem !important;
+    }
+
+    .ql-toolbar.ql-snow .ql-picker.ql-header {
+        width: 88px !important;
+        min-width: 88px !important;
+    }
+
+    .ql-toolbar.ql-snow button {
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    #editor-container {
+        height: 220px !important;
+        min-height: 220px !important;
+    }
+
+    .ql-editor {
+        min-height: 220px !important;
+    }
+}
+
+
+
+

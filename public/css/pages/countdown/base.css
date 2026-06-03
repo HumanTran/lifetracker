@@ -1,0 +1,220 @@
+﻿.countdown-list,
+.countdown-list > * {
+    min-width: 0;
+}
+
+.countdown-list {
+    align-items: stretch;
+}
+
+.countdown-item {
+    display: flex;
+}
+
+.countdown-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    background-color: var(--countdown-color) !important;
+    color: #f8fafc !important;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.countdown-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.countdown-card-body {
+    display: grid !important;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    min-height: 236px;
+}
+
+.countdown-card-header {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start !important;
+    gap: 0.85rem;
+    margin-bottom: 0 !important;
+    min-width: 0;
+}
+
+.countdown-card-info {
+    min-width: 0;
+}
+
+.countdown-title {
+    display: -webkit-box;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    white-space: normal;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.2;
+}
+
+.countdown-date {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    line-height: 1.25;
+}
+
+.countdown-date i {
+    flex: 0 0 auto;
+    margin-right: 0 !important;
+}
+
+.countdown-card-actions {
+    flex: 0 0 auto;
+    gap: 0.75rem !important;
+}
+
+.countdown-card-actions .btn {
+    width: 1.6rem;
+    height: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-card :is(.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:focus-visible, .btn-link:active, .btn-link.active),
+.countdown-card-actions :is(.btn, .btn:hover, .btn:focus, .btn:focus-visible, .btn:active) {
+    text-decoration: none !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+.countdown-card .btn-link i,
+.countdown-card-actions .btn i {
+    text-decoration: none !important;
+    border-bottom: 0 !important;
+    line-height: 1 !important;
+}
+
+.countdown-card .ajax-delete-countdown-form,
+.countdown-card .ajax-delete-countdown-form button {
+    text-decoration: none !important;
+    border-bottom: 0 !important;
+}
+
+.countdown-timer {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-self: center !important;
+    gap: 0.6rem !important;
+    width: 100%;
+    min-width: 0;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.time-box {
+    min-width: 0;
+    padding: 0.7rem 0.4rem;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+.time-box .num {
+    overflow: hidden;
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.time-box .label {
+    overflow: hidden;
+    font-size: 0.68rem;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: 0.9;
+}
+
+.message-box,
+.countdown-message-slot {
+    display: flex !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    align-self: end !important;
+    width: 100% !important;
+    min-height: 42px !important;
+    margin-top: 0 !important;
+    padding: 0.55rem 0.5rem !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow-wrap: anywhere;
+    border-radius: 0.75rem !important;
+    background: rgba(0, 0, 0, 0.2);
+    line-height: 1.15 !important;
+    pointer-events: none;
+}
+
+.message-box[style*="block"],
+.message-box[style*="display: block"],
+.message-box.is-visible,
+.countdown-message-slot[style*="block"],
+.countdown-message-slot[style*="display: block"],
+.countdown-message-slot.is-visible {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto;
+}
+
+.countdown-empty-state {
+    display: flex;
+    min-height: min(360px, 55vh);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-empty-icon {
+    font-size: 4rem;
+}
+
+.native-color-picker {
+    height: 40px;
+    cursor: pointer;
+}
+
+.countdown-modal-dialog {
+    width: min(520px, calc(100vw - 2rem));
+    max-width: min(520px, calc(100vw - 2rem));
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#addCountdownModal .modal-content,
+#editCountdownModal .modal-content {
+    max-height: calc(100dvh - 2rem);
+    overflow: hidden;
+}
+
+#addCountdownModal .modal-body,
+#editCountdownModal .modal-body {
+    overflow-y: auto;
+}
+

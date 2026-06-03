@@ -1,0 +1,240 @@
+.dashboard-summary-card,
+.dashboard-habit-card {
+    border-radius: 1rem;
+}
+
+.dashboard-summary-card .card-body {
+    min-height: 128px;
+}
+
+.dashboard-summary-title,
+.dashboard-summary-subtext,
+.dashboard-summary-empty {
+    overflow-wrap: anywhere;
+}
+
+.dashboard-summary-value {
+    line-height: 1.1;
+}
+
+.dashboard-summary-icon {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-habit-list {
+    max-height: 360px;
+}
+
+.dashboard-task-item:last-child,
+.dashboard-habit-row:last-child {
+    border-bottom: 0 !important;
+}
+
+.dashboard-task-item {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+}
+
+.dashboard-task-title {
+    line-height: 1.35;
+}
+
+.dashboard-priority-pill {
+    justify-self: end;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+}
+
+.dashboard-priority-high {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.dashboard-priority-med {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.dashboard-priority-low {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.dashboard-habit-dot {
+    width: 8px;
+    height: 8px;
+}
+
+.dashboard-chart-box {
+    height: 280px;
+    min-height: 220px;
+}
+
+.dashboard-habit-title-wrap {
+    width: 220px;
+    min-width: 180px;
+}
+
+.dashboard-habit-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dashboard-habit-box {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-habit-box i {
+    font-size: 0.72rem;
+}
+
+.dashboard-link-primary {
+    color: #0d6efd;
+}
+
+@media (max-width: 767.98px) {
+    .dashboard-work-row,
+    .dashboard-lower-row {
+        gap: 0.9rem !important;
+    }
+
+    .dashboard-chart-box {
+        height: 220px;
+        min-height: 200px;
+    }
+
+    .dashboard-habit-row {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "title stats"
+            "boxes boxes";
+        gap: 0.55rem;
+        align-items: center;
+    }
+
+    .dashboard-habit-title-wrap {
+        grid-area: title;
+        width: auto;
+        min-width: 0;
+    }
+
+    .dashboard-habit-boxes {
+        grid-area: boxes;
+        justify-content: flex-start !important;
+        flex-wrap: wrap;
+    }
+
+    .dashboard-habit-stats {
+        grid-area: stats;
+    }
+
+    .dashboard-task-item {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .dashboard-priority-pill {
+        justify-self: start;
+    }
+}
+
+@media (max-width: 430px) {
+    .dashboard-summary-grid {
+        --bs-gutter-x: 0.65rem;
+        --bs-gutter-y: 0.65rem;
+    }
+
+    .dashboard-summary-card .card-body {
+        min-height: 112px;
+        padding: 0.75rem !important;
+    }
+
+    .dashboard-summary-title {
+        font-size: 0.68rem !important;
+        line-height: 1.15;
+    }
+
+    .dashboard-summary-icon {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+    }
+
+    .dashboard-summary-value {
+        font-size: 1.05rem;
+    }
+
+    .dashboard-summary-small-text,
+    .dashboard-summary-subtext {
+        font-size: 0.74rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .dashboard-summary-grid > [class*="col-"] {
+        flex: 0 0 50%;
+        width: 50%;
+        max-width: 50%;
+    }
+
+    .dashboard-summary-grid {
+        --bs-gutter-x: 0.55rem;
+        --bs-gutter-y: 0.55rem;
+    }
+
+    .dashboard-summary-card .card-body {
+        min-height: 118px;
+        padding: 0.65rem !important;
+    }
+
+    .dashboard-summary-card .card-body > .d-flex:first-child {
+        align-items: flex-start !important;
+        gap: 0.35rem;
+    }
+
+    .dashboard-summary-title {
+        font-size: 0.58rem !important;
+        line-height: 1.15;
+    }
+
+    .dashboard-summary-icon {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        font-size: 0.78rem;
+    }
+
+    .dashboard-summary-value,
+    .dashboard-summary-empty {
+        font-size: 0.96rem;
+        line-height: 1.12;
+    }
+
+    .dashboard-summary-small-text,
+    .dashboard-summary-subtext {
+        font-size: 0.66rem;
+        line-height: 1.25;
+    }
+
+    .dashboard-chart-box {
+        height: 190px;
+        min-height: 190px;
+    }
+
+    .dashboard-habit-box {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+    }
+}

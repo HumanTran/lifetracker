@@ -1,0 +1,68 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-width: 0;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.auth-page {
+    width: 100%;
+    min-height: 100dvh;
+    padding: 1.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.auth-card {
+    width: min(100%, 420px);
+    max-width: 420px;
+    padding: 1.75rem;
+}
+
+.auth-card-signup {
+    width: min(100%, 460px);
+    max-width: 460px;
+}
+
+.auth-card h4 {
+    font-size: 1.35rem;
+    line-height: 1.25;
+}
+
+.auth-brand-icon {
+    width: 58px;
+    height: 58px;
+    flex: 0 0 auto;
+}
+
+.auth-card .form-control,
+.auth-card .btn {
+    width: 100%;
+}
+
+.auth-login-meta,
+.auth-switch-link {
+    min-width: 0;
+}
+
+.auth-login-meta a,
+.auth-switch-link a,
+.auth-switch-link span {
+    overflow-wrap: anywhere;
+}
+
+.auth-remember-label {
+    cursor: pointer;
+}

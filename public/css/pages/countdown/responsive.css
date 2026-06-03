@@ -1,0 +1,204 @@
+﻿@media (min-width: 768px) and (max-width: 1199.98px) {
+    #countdownList {
+        --bs-gutter-x: 1rem;
+        --bs-gutter-y: 1.25rem;
+    }
+
+    .countdown-card-body {
+        min-height: 224px;
+        padding: 1.25rem !important;
+    }
+
+    .countdown-title {
+        font-size: 1.05rem;
+    }
+
+    .time-box .num {
+        font-size: 1.22rem;
+    }
+
+    .time-box .label {
+        font-size: 0.58rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .countdown-add-trigger {
+        max-width: 100%;
+        white-space: nowrap;
+    }
+
+    #countdownList {
+        --bs-gutter-x: 0;
+        --bs-gutter-y: 0.9rem;
+    }
+
+    #countdownList .countdown-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    .countdown-card:hover {
+        transform: none;
+    }
+
+    .countdown-card-body {
+        min-height: 0;
+        padding: 1rem !important;
+        row-gap: 0.85rem;
+    }
+
+    .countdown-card-header {
+        gap: 0.75rem;
+    }
+
+    .countdown-title {
+        font-size: 1rem !important;
+        line-height: 1.2 !important;
+        -webkit-line-clamp: 2;
+    }
+
+    .countdown-date {
+        font-size: 0.82rem !important;
+    }
+
+    .countdown-card-actions {
+        gap: 0.55rem !important;
+    }
+
+    .countdown-card-actions .btn {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .countdown-timer {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.45rem !important;
+    }
+
+    .time-box {
+        padding: 0.58rem 0.3rem;
+        border-radius: 0.7rem;
+    }
+
+    .time-box .num {
+        font-size: clamp(1rem, 6.5vw, 1.35rem);
+    }
+
+    .time-box .label {
+        font-size: 0.62rem;
+        letter-spacing: 0.03em;
+    }
+
+    .message-box,
+    .countdown-message-slot {
+        min-height: 38px !important;
+        padding: 0.48rem 0.35rem !important;
+        font-size: 0.78rem !important;
+    }
+
+    .countdown-empty-state {
+        min-height: 280px;
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }
+
+    .countdown-empty-icon {
+        font-size: 3.25rem;
+    }
+
+    #addCountdownModal,
+    #editCountdownModal {
+        padding-right: 0 !important;
+    }
+
+    #addCountdownModal .modal-dialog,
+    #editCountdownModal .modal-dialog {
+        width: calc(100vw - 1.5rem);
+        max-width: calc(100vw - 1.5rem);
+        margin: 0.75rem auto;
+    }
+
+    #addCountdownModal .modal-header,
+    #editCountdownModal .modal-header,
+    #addCountdownModal .modal-body,
+    #editCountdownModal .modal-body {
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }
+
+    #addCountdownModal .modal-footer,
+    #editCountdownModal .modal-footer {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 0.6rem;
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }
+
+    #addCountdownModal .modal-footer .btn,
+    #editCountdownModal .modal-footer .btn {
+        width: 100%;
+        min-width: 0;
+        margin: 0 !important;
+        padding-right: 0.75rem !important;
+        padding-left: 0.75rem !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .countdown-add-trigger {
+        padding: 0.55rem 0.75rem !important;
+        font-size: 0.82rem !important;
+    }
+
+    .countdown-card-body {
+        padding: 0.85rem !important;
+        row-gap: 0.75rem;
+    }
+
+    .countdown-card-header {
+        gap: 0.55rem;
+    }
+
+    .countdown-title {
+        font-size: 0.96rem !important;
+    }
+
+    .countdown-date {
+        font-size: 0.78rem !important;
+    }
+
+    .countdown-card-actions {
+        gap: 0.4rem !important;
+    }
+
+    .countdown-card-actions .btn {
+        width: 1.55rem;
+        height: 1.55rem;
+    }
+
+    .countdown-timer {
+        gap: 0.35rem !important;
+    }
+
+    .time-box {
+        padding: 0.5rem 0.22rem;
+    }
+
+    .time-box .num {
+        font-size: clamp(0.95rem, 6vw, 1.15rem);
+    }
+
+    .time-box .label {
+        font-size: 0.56rem;
+    }
+
+    #addCountdownModal .modal-footer,
+    #editCountdownModal .modal-footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+

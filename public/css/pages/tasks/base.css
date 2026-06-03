@@ -1,0 +1,278 @@
+﻿.task-page-card,
+.task-page-card .card-body {
+    overflow: visible;
+}
+
+#taskFilterForm {
+    gap: 1rem;
+}
+
+.task-filter-search {
+    width: min(320px, 100%);
+}
+
+.task-filter-tag {
+    width: 200px;
+}
+
+.task-filter-priority {
+    width: 170px;
+}
+
+.task-view-toolbar {
+    flex-wrap: wrap;
+}
+
+.task-daily-date {
+    width: 160px;
+}
+
+.task-table-wrapper {
+    overflow-x: auto;
+}
+
+.task-table {
+    width: 100%;
+    min-width: 860px;
+    table-layout: fixed;
+}
+
+.task-col-check {
+    width: 44px;
+}
+
+.task-col-tag {
+    width: 190px;
+}
+
+.task-col-deadline {
+    width: 150px;
+}
+
+.task-col-priority {
+    width: 170px;
+}
+
+.task-col-actions {
+    width: 110px;
+}
+
+#taskTableBody,
+#taskListArea {
+    transition: opacity 0.15s ease;
+}
+
+.task-row-item > td {
+    padding: 0.9rem 0.7rem;
+    vertical-align: middle;
+}
+
+.task-title-text {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.task-table .dropdown-menu,
+.task-card .dropdown-menu {
+    z-index: 1065;
+}
+
+.task-tag-pill {
+    max-width: 100%;
+    background-color: #dbeafe;
+    color: #0d6efd;
+    border-color: #93c5fd;
+}
+
+.task-tag-pill .task-tag-text,
+.task-tag-pill [id^="tag-text-"] {
+    display: inline-block;
+    max-width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+
+.task-priority-pill.task-priority-high {
+    background-color: #f8d7da;
+    color: #dc3545;
+    border-color: #f1aeb5;
+}
+
+.task-priority-pill.task-priority-med {
+    background-color: #fff3cd;
+    color: #b45309;
+    border-color: #ffda6a;
+}
+
+.task-priority-pill.task-priority-low {
+    background-color: #d1e7dd;
+    color: #198754;
+    border-color: #a3cfbb;
+}
+
+.task-tag-pill i,
+.task-priority-pill i {
+    color: inherit;
+}
+
+.task-clickable-pill,
+.task-priority-pill {
+    cursor: pointer;
+}
+
+.task-tag-add-btn {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    flex: 0 0 auto;
+}
+
+.task-tag-menu {
+    min-width: 220px;
+}
+
+.task-tag-option-row {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.task-tag-option-row .dropdown-item {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+.task-tag-manage-btn {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.task-tag-add-btn i,
+.task-tag-manage-btn i {
+    font-size: 0.72rem;
+}
+
+.task-deadline-input {
+    width: 135px;
+}
+
+.task-priority-menu {
+    min-width: 160px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+.task-priority-menu .task-priority-option:hover {
+    background-color: #f1f5f9;
+}
+
+.task-card-list {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.task-card,
+.task-empty-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.9rem;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.task-card {
+    display: grid;
+    gap: 0.85rem;
+    padding: 0.95rem;
+}
+
+.task-empty-card {
+    padding: 1.25rem;
+    color: #64748b;
+    font-style: italic;
+    text-align: center;
+}
+
+.task-card-header {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    gap: 0.65rem;
+    align-items: start;
+}
+
+.task-card-title {
+    min-width: 0;
+    color: #0f172a;
+    font-weight: 700;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.task-card-actions {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.45rem;
+}
+
+.task-action-btn,
+.task-cell-actions .btn {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.task-card-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.task-card-field {
+    min-width: 0;
+}
+
+.task-card-field-wide {
+    grid-column: 1 / -1;
+}
+
+.task-card-label {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #64748b;
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+.task-card .task-deadline-input {
+    width: min(170px, 100%);
+}
+
+#tagManageModal.show {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#tagManageModal .modal-dialog {
+    width: min(440px, calc(100vw - 2rem));
+    max-width: min(440px, calc(100vw - 2rem));
+    margin: 0 auto;
+    transform: none;
+}
+

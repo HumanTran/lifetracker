@@ -1,0 +1,189 @@
+﻿@media (min-width: 992px) and (max-width: 1199.98px) {
+    #mainSidebar ~ .main-container .journal-page-row {
+        row-gap: 1rem !important;
+    }
+
+    #mainSidebar ~ .main-container .journal-list-col,
+    #mainSidebar ~ .main-container .journal-editor-col {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    #mainSidebar ~ .main-container .journal-editor-col {
+        order: -1;
+    }
+
+    #mainSidebar ~ .main-container #editor-container {
+        height: 300px !important;
+        min-height: 300px !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .journal-page-row {
+        --bs-gutter-y: 1rem;
+        row-gap: 1rem !important;
+    }
+
+    .journal-editor-col {
+        order: -1;
+    }
+
+    .journal-list-card,
+    .journal-editor-card {
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    #editor-container {
+        height: 320px !important;
+        min-height: 320px !important;
+    }
+
+    .ql-editor {
+        min-height: 320px !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .journal-list-card .card-body,
+    .journal-editor-card > .card-body {
+        padding: 1rem !important;
+    }
+
+    .journal-editor-card #journalForm {
+        padding: 0 1rem 1rem;
+    }
+
+    .journal-editor-card #journalForm > .px-4,
+    .journal-editor-card #journalForm > .mb-3.px-4,
+    .journal-editor-card #journalForm > .d-flex.px-4 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .journal-list-wrap {
+        max-height: 320px;
+    }
+
+    .journal-title {
+        max-width: 100%;
+    }
+
+    .journal-inline-filter-form .input-group {
+        margin-bottom: 0.6rem !important;
+        box-shadow: none !important;
+    }
+
+    .journal-filter-row {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        gap: 0.5rem !important;
+        align-items: stretch !important;
+    }
+
+    .journal-filter-row .btn,
+    .journal-filter-row input[type="date"],
+    .journal-filter-row a {
+        min-height: 38px;
+    }
+
+    .journal-filter-row a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ql-toolbar.ql-snow {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        gap: 0.35rem !important;
+        overflow: visible !important;
+        padding: 0.55rem !important;
+        border-radius: 0.95rem 0.95rem 0 0 !important;
+    }
+
+    .ql-toolbar.ql-snow .ql-formats {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0.1rem !important;
+        margin: 0 !important;
+        padding-right: 0.4rem !important;
+        border-right: 1px solid var(--bs-border-color);
+    }
+
+    .ql-toolbar.ql-snow .ql-formats:last-child {
+        border-right: 0;
+    }
+
+    .ql-toolbar.ql-snow button {
+        width: 27px !important;
+        height: 27px !important;
+        padding: 2px !important;
+    }
+
+    .ql-toolbar.ql-snow .ql-picker {
+        height: 27px !important;
+        font-size: 0.8rem !important;
+    }
+
+    .ql-toolbar.ql-snow .ql-picker.ql-header {
+        width: 96px !important;
+        min-width: 96px !important;
+    }
+
+    .ql-toolbar.ql-snow .ql-picker-label {
+        width: 100% !important;
+        height: 27px !important;
+        padding: 3px 22px 3px 6px !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
+    }
+
+    .ql-toolbar.ql-snow .ql-picker-options {
+        z-index: 1000 !important;
+        max-width: calc(100vw - 2rem) !important;
+        border-radius: 0.7rem !important;
+        background-color: var(--bs-body-bg) !important;
+        border-color: var(--bs-border-color) !important;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.22) !important;
+    }
+
+    .ql-container.ql-snow {
+        border-radius: 0 0 0.95rem 0.95rem !important;
+    }
+
+    #editor-container {
+        height: 280px !important;
+        min-height: 280px !important;
+        overflow: hidden !important;
+        border-radius: 0 0 0.95rem 0.95rem !important;
+    }
+
+    .ql-editor {
+        min-height: 280px !important;
+        padding: 0.9rem !important;
+        font-size: 0.92rem !important;
+        line-height: 1.55 !important;
+    }
+
+    .journal-editor-card .d-flex.justify-content-end {
+        justify-content: stretch !important;
+        padding: 0 !important;
+        margin-top: 0.25rem;
+    }
+
+    .journal-editor-card .d-flex.justify-content-end .btn {
+        width: 100%;
+        min-height: 46px;
+        border-radius: 0.95rem !important;
+    }
+
+    .journal-pagination-wrap .custom-pagination {
+        justify-content: flex-start !important;
+    }
+}
+
