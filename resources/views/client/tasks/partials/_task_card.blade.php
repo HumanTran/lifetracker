@@ -13,7 +13,7 @@
     $showDeadline = $showDeadline ?? true;
 @endphp
 
-<article class="task-card task-record-item"
+<article class="task-card d-grid gap-3 p-3 border bg-white shadow-sm rounded-3"
     id="task-card-{{ $task->id }}"
     data-role="task"
     data-task-id="{{ $task->id }}"
@@ -25,17 +25,19 @@
     data-search-title="{{ \Illuminate\Support\Str::lower($task->title) }}"
     data-title="{{ e($task->title) }}"
     data-due-date="{{ $task->due_date ? \Carbon\Carbon::parse($task->due_date)->toDateString() : '' }}">
-    <div class="task-card-header">
-        <input class="form-check-input shadow-none fs-5 border-secondary-subtle task-status-checkbox" type="checkbox"
-            data-task-id="{{ $task->id }}" {{ $task->status === 'done' ? 'checked' : '' }}>
+    <div class="row g-2 align-items-start">
+        <div class="col-auto pt-1">
+            <input class="form-check-input shadow-none fs-5 border-secondary-subtle task-status-checkbox" type="checkbox"
+                data-task-id="{{ $task->id }}" {{ $task->status === 'done' ? 'checked' : '' }}>
+        </div>
 
-        <div class="task-card-title">
+        <div class="col fw-bold text-dark lh-sm text-break overflow-hidden">
             {{ $task->title }}
         </div>
 
-        <div class="task-card-actions">
+        <div class="col-auto d-inline-flex align-items-center justify-content-end gap-2">
             <button type="button"
-                class="btn btn-light btn-sm rounded border text-primary task-action-btn"
+                class="btn btn-light btn-sm rounded border text-primary d-inline-flex align-items-center justify-content-center p-0 task-action-btn"
                 title="Sửa công việc"
                 data-action="open-edit-task" data-task-id="{{ $task->id }}">
                 <i class="fa-solid fa-pen"></i>
@@ -45,20 +47,20 @@
                 @csrf
                 @method('DELETE')
 
-                <button type="submit" class="btn btn-light btn-sm rounded border text-danger task-action-btn" title="Xóa công việc">
+                <button type="submit" class="btn btn-light btn-sm rounded border text-danger d-inline-flex align-items-center justify-content-center p-0 task-action-btn" title="Xóa công việc">
                     <i class="fa-regular fa-trash-can"></i>
                 </button>
             </form>
         </div>
     </div>
 
-    <div class="task-card-fields">
-        <div class="task-card-field">
-            <span class="task-card-label">Tag</span>
+    <div class="row g-3">
+        <div class="col-12 col-sm-6 task-card-field">
+            <span class="d-block mb-1 text-secondary small fw-bold">Tag</span>
 
             <div class="d-flex align-items-center gap-2">
-                <div class="dropdown d-inline-block min-w-0">
-                    <span class="badge task-tag-pill px-3 py-2 rounded-pill fw-semibold border task-clickable-pill"
+                <div class="dropdown flex-grow-1 overflow-hidden">
+                    <span class="badge task-tag-pill px-3 py-2 rounded-pill fw-semibold border w-100 text-start d-flex justify-content-between align-items-center task-clickable-pill"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="task-tag-text">{{ $displayTagName }}</span>
                         <i class="fa-solid fa-chevron-down ms-1 opacity-50"></i>
@@ -66,14 +68,14 @@
 
                     <ul class="dropdown-menu task-tag-menu border-0 shadow rounded-3 py-2">
                         @forelse($tags as $t)
-                            <li class="task-tag-option-row px-2" data-tag-option-id="{{ $t->id }}">
-                                <a class="dropdown-item small fw-medium text-muted rounded-2 flex-grow-1" href="#"
+                            <li class="task-tag-option-row d-flex align-items-center gap-1 px-2" data-tag-option-id="{{ $t->id }}">
+                                <a class="dropdown-item small fw-medium text-muted rounded-2 flex-grow-1 d-flex align-items-center" href="#"
                                     data-action="update-tag" data-task-id="{{ $task->id }}" data-tag-name="{{ $t->name }}">
                                     <span class="text-truncate">{{ $t->name }}</span>
                                 </a>
 
                                 <button type="button"
-                                    class="btn btn-sm task-tag-manage-btn text-muted"
+                                    class="btn btn-sm task-tag-manage-btn text-muted p-0 d-inline-flex align-items-center justify-content-center rounded-2"
                                     data-action="prompt-edit-tag"
                                     data-tag-id="{{ $t->id }}"
                                     data-tag-name="{{ $t->name }}"
@@ -82,7 +84,7 @@
                                 </button>
 
                                 <button type="button"
-                                    class="btn btn-sm task-tag-manage-btn text-danger"
+                                    class="btn btn-sm task-tag-manage-btn text-danger p-0 d-inline-flex align-items-center justify-content-center rounded-2"
                                     data-action="delete-tag"
                                     data-tag-id="{{ $t->id }}"
                                     data-tag-name="{{ $t->name }}"
@@ -97,15 +99,15 @@
                 </div>
 
                 <button
-                    class="btn btn-sm btn-light rounded-circle text-muted border shadow-sm d-flex align-items-center justify-content-center task-tag-add-btn"
+                    class="btn btn-sm btn-light rounded-circle text-muted border shadow-sm d-flex align-items-center justify-content-center p-0 flex-shrink-0 task-tag-add-btn"
                     data-action="prompt-new-tag" data-task-id="{{ $task->id }}" title="Tạo tag mới">
                     <i class="fa-solid fa-plus"></i>
                 </button>
             </div>
         </div>
 
-        <div class="task-card-field">
-            <span class="task-card-label">Ưu tiên</span>
+        <div class="col-12 col-sm-6 task-card-field">
+            <span class="d-block mb-1 text-secondary small fw-bold">Ưu tiên</span>
 
             <div class="dropdown d-inline-block w-100">
                 <span
@@ -115,7 +117,7 @@
                     <i class="fa-solid fa-chevron-down opacity-50"></i>
                 </span>
 
-                <ul class="dropdown-menu task-priority-menu border-0 shadow rounded-3 py-2">
+                <ul class="dropdown-menu task-priority-menu bg-white border shadow rounded-3 py-2">
                     <li>
                         <a class="dropdown-item task-priority-option priority-high small fw-medium" href="#"
                             data-action="update-inline" data-task-id="{{ $task->id }}" data-field="priority" data-value="high" data-label="Cao">
@@ -141,8 +143,8 @@
         </div>
 
         @if($showDeadline)
-            <div class="task-card-field task-card-field-wide">
-                <span class="task-card-label">Deadline</span>
+            <div class="col-12 task-card-field">
+                <span class="d-block mb-1 text-secondary small fw-bold">Deadline</span>
 
                 <input type="date"
                     class="form-control form-control-sm bg-light border text-muted rounded-pill px-3 py-2 shadow-none task-deadline-input"

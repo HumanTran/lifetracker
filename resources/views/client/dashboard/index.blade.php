@@ -12,7 +12,7 @@
 
     @include('client.dashboard.partials._work_and_chart')
 
-    <div class="row mb-4 g-3 dashboard-lower-row">
+    <div class="row mb-4 g-3 g-xl-4 dashboard-lower-row">
         @include('client.dashboard.partials._productivity_chart_card')
     </div>
 

@@ -1,6 +1,6 @@
 <div class="modal fade" id="exportModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0 shadow">
+        <div class="modal-content border-0 shadow rounded-4">
             <div class="modal-header border-bottom-0 pb-0">
                 <h5 class="modal-title fw-bold">
                     <i class="fa-solid fa-download text-success me-2"></i>

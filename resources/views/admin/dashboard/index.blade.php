@@ -4,7 +4,7 @@
 @section('page_title', 'Dashboard')
 
 @section('topbar_actions')
-    <form id="filterForm" method="GET" action="{{ route('admin.dashboard') }}" class="m-0">
+    <form id="filterForm" method="GET" action="{{ route('admin.dashboard') }}" class="m-0 flex-shrink-0">
         <select id="adminTimeFilter" name="time" class="form-select form-select-sm shadow-none">
             <option value="week" {{ ($timeFilter ?? 'month') === 'week' ? 'selected' : '' }}>Tuần</option>
             <option value="month" {{ ($timeFilter ?? 'month') === 'month' ? 'selected' : '' }}>Tháng</option>

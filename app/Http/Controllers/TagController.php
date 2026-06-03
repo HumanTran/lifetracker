@@ -13,6 +13,7 @@ class TagController
         return Tag::where('user_id', Auth::id());
     }
 
+    //đổi tên tag
     public function update(Request $request, int $id)
     {
         $validated = $request->validate([
@@ -21,20 +22,25 @@ class TagController
 
         $name = trim($validated['name']);
 
+        //không được rỗng
         if ($name === '') {
             return response()->json(['success' => false], 422);
         }
 
+        //tìm tag cần sửa
         $tag = $this->tags()->where('id', $id)->firstOrFail();
 
+        //kiểm tra tag trùng tên
         $existing = $this->tags()
             ->where('name', $name)
             ->where('id', '!=', $tag->id)
             ->first();
 
+        //nếu đã có task trùng tên thì gộp
         if ($existing) {
-            $tag->tasks()->update(['tag_id' => $existing->id]);
+            $tag->tasks()->update(['tag_id' => $existing->id]); // thay tag của các task dùng tag cũ
 
+            //lưu lại tên cũ và xóa task
             $oldName = $tag->name;
             $tag->delete();
 
@@ -46,8 +52,9 @@ class TagController
             ]);
         }
 
+        //tag không trùng tên
         $oldName = $tag->name;
-        $tag->update(['name' => $name]);
+        $tag->update(['name' => $name]); //cập nhật tên mới
 
         return response()->json([
             'success' => true,
@@ -57,6 +64,7 @@ class TagController
         ]);
     }
 
+    //xóa tag
     public function destroy(int $id)
     {
         $tag = $this->tags()->where('id', $id)->firstOrFail();

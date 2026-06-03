@@ -5,7 +5,7 @@
 
 <div id="habit-row-{{ $habit->id }}"
     data-habit-id="{{ $habit->id }}"
-    class="habit-row habit-mobile-row d-flex align-items-center mb-3 p-2 rounded-3 {{ $isActive ? 'active bg-primary bg-opacity-10 border-primary-subtle' : '' }}">
+    class="habit-row d-flex align-items-center gap-4 mb-3 p-2 rounded-3 {{ $isActive ? 'active bg-primary bg-opacity-10 border-primary-subtle' : '' }}">
 
     <div class="habit-title-wrap d-flex align-items-center gap-2 fw-medium text-dark pe-2">
         <i class="fa-solid fa-circle text-primary flex-shrink-0"></i>
@@ -53,7 +53,7 @@
 
     <div class="habit-actions-wrap dropdown flex-shrink-0 border-start ps-2 ms-1">
         <button
-            class="btn btn-link text-muted p-0 shadow-none border-0 d-flex align-items-center justify-content-center"
+            class="btn btn-link text-muted text-decoration-none p-0 shadow-none border-0 d-flex align-items-center justify-content-center"
             type="button"
             data-bs-toggle="dropdown"
             data-action="stop-prop">

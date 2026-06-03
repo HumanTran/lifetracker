@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="{{ asset('css/pages/auth.css') }}">
 </head>
 
-<body class="auth-page d-flex align-items-center justify-content-center">
-    <div class="card border-0 shadow-lg rounded-4 auth-card auth-card-signup">
+<body class="auth-page w-100 p-4 d-flex align-items-center justify-content-center">
+    <div class="card border-0 shadow-lg rounded-4 p-4 auth-card auth-card-signup">
         <div class="text-center mb-4">
             <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-circle mb-3 auth-brand-icon">
                 <i class="fa-solid fa-user-plus fs-2"></i>

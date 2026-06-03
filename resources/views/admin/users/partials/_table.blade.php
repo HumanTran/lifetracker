@@ -1,5 +1,5 @@
 <div id="adminUsersTableArea">
-    <div class="admin-users-table-wrap table-responsive d-none d-lg-block">
+    <div class="table-responsive d-none d-lg-block">
         <table class="table table-borderless align-middle mb-0 admin-users-table">
             <colgroup>
                 <col class="admin-col-id">
@@ -35,12 +35,16 @@
         </table>
     </div>
 
-    <div id="adminUsersCardList" class="admin-users-card-list d-lg-none">
+    <div id="adminUsersCardList" class="row g-3 admin-users-card-list d-lg-none">
         @forelse($users as $user)
-            @include('admin.users.partials._user_card', ['user' => $user])
+            <div class="col-12 col-md-6">
+                @include('admin.users.partials._user_card', ['user' => $user])
+            </div>
         @empty
-            <div id="adminUsersMobileEmpty" class="admin-users-empty-card">
-                Không có người dùng phù hợp.
+            <div class="col-12">
+                <div id="adminUsersMobileEmpty" class="admin-users-empty-card border bg-white shadow-sm rounded-4 p-4 text-muted fst-italic text-center">
+                    Không có người dùng phù hợp.
+                </div>
             </div>
         @endforelse
     </div>
@@ -48,7 +52,7 @@
 
 <div id="adminUsersPaginationArea">
     @if($users->hasPages())
-        <div class="d-flex justify-content-between align-items-center mt-4 flex-wrap gap-3 lt-pagination-wrap">
+        <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-start align-items-md-center mt-4 gap-3 lt-pagination-wrap">
             <div class="text-muted small fw-medium">
                 Hiển thị {{ $users->firstItem() }} - {{ $users->lastItem() }}
                 / Tổng {{ $users->total() }} người dùng

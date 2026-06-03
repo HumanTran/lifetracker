@@ -44,7 +44,7 @@ function renderHabitHistory(title, logs) {
 
     let html = '<div class="history-weekdays mb-2">';
     ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'].forEach((day) => {
-        html += `<div class="small text-muted fw-semibold">${day}</div>`;
+        html += `<div class="small text-muted fw-semibold text-center">${day}</div>`;
     });
     html += '</div><div class="history-days-grid">';
 
@@ -58,7 +58,7 @@ function renderHabitHistory(title, logs) {
         html += `
             <button type="button"
                 id="history-box-${dateStr}"
-                class="btn history-day-btn ${done ? 'btn-primary text-white' : 'btn-light border text-muted'}"
+                class="btn p-0 history-day-btn ${done ? 'btn-primary text-white' : 'btn-light border text-muted'}"
                 data-action="toggle-habit-log"
                 data-habit-id="${selectedHabitId}"
                 data-date="${dateStr}">

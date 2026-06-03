@@ -9,7 +9,7 @@
 
 @section('content')
     <div class="card border-0 shadow-sm rounded-4 task-page-card">
-        <div class="card-body p-4">
+        <div class="card-body p-3 p-md-4">
             @php
                 $view = $view ?? 'daily';
                 $isDaily = $view === 'daily';
@@ -26,7 +26,7 @@
                     'selectedDate' => $selectedDate,
                     'isDaily' => $isDaily,
                     'indexUrl' => route('tasks.index'),
-                ]) !!}
+                ]) !!}  {{-- {!!...!!} là để json được in ra đúng dạng, ko bị biến dấu ngoặc kép thành html --}}
             </script>
 
             @include('client.tasks.partials._filters')

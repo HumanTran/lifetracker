@@ -1,8 +1,3 @@
-.dashboard-summary-card,
-.dashboard-habit-card {
-    border-radius: 1rem;
-}
-
 .dashboard-summary-card .card-body {
     min-height: 128px;
 }
@@ -20,9 +15,6 @@
 .dashboard-summary-icon {
     width: 42px;
     height: 42px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .dashboard-habit-list {
@@ -36,7 +28,6 @@
 
 .dashboard-task-item {
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
 }
 
 .dashboard-task-title {
@@ -45,9 +36,6 @@
 
 .dashboard-priority-pill {
     justify-self: end;
-    max-width: 100%;
-    white-space: normal;
-    text-align: center;
 }
 
 .dashboard-priority-high {
@@ -90,9 +78,6 @@
     width: 30px;
     height: 30px;
     min-width: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .dashboard-habit-box i {
@@ -104,11 +89,6 @@
 }
 
 @media (max-width: 767.98px) {
-    .dashboard-work-row,
-    .dashboard-lower-row {
-        gap: 0.9rem !important;
-    }
-
     .dashboard-chart-box {
         height: 220px;
         min-height: 200px;
@@ -150,11 +130,6 @@
 }
 
 @media (max-width: 430px) {
-    .dashboard-summary-grid {
-        --bs-gutter-x: 0.65rem;
-        --bs-gutter-y: 0.65rem;
-    }
-
     .dashboard-summary-card .card-body {
         min-height: 112px;
         padding: 0.75rem !important;
@@ -182,17 +157,6 @@
 }
 
 @media (max-width: 375px) {
-    .dashboard-summary-grid > [class*="col-"] {
-        flex: 0 0 50%;
-        width: 50%;
-        max-width: 50%;
-    }
-
-    .dashboard-summary-grid {
-        --bs-gutter-x: 0.55rem;
-        --bs-gutter-y: 0.55rem;
-    }
-
     .dashboard-summary-card .card-body {
         min-height: 118px;
         padding: 0.65rem !important;

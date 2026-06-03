@@ -1,9 +1,4 @@
 ﻿@media (min-width: 768px) and (max-width: 1199.98px) {
-    #countdownList {
-        --bs-gutter-x: 1rem;
-        --bs-gutter-y: 1.25rem;
-    }
-
     .countdown-card-body {
         min-height: 224px;
         padding: 1.25rem !important;
@@ -28,17 +23,6 @@
         white-space: nowrap;
     }
 
-    #countdownList {
-        --bs-gutter-x: 0;
-        --bs-gutter-y: 0.9rem;
-    }
-
-    #countdownList .countdown-item {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100% !important;
-    }
-
     .countdown-card:hover {
         transform: none;
     }
@@ -46,11 +30,6 @@
     .countdown-card-body {
         min-height: 0;
         padding: 1rem !important;
-        row-gap: 0.85rem;
-    }
-
-    .countdown-card-header {
-        gap: 0.75rem;
     }
 
     .countdown-title {
@@ -63,18 +42,9 @@
         font-size: 0.82rem !important;
     }
 
-    .countdown-card-actions {
-        gap: 0.55rem !important;
-    }
-
     .countdown-card-actions .btn {
         width: 1.75rem;
         height: 1.75rem;
-    }
-
-    .countdown-timer {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 0.45rem !important;
     }
 
     .time-box {
@@ -130,20 +100,8 @@
 
     #addCountdownModal .modal-footer,
     #editCountdownModal .modal-footer {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: 0.6rem;
         padding-right: 1rem !important;
         padding-left: 1rem !important;
-    }
-
-    #addCountdownModal .modal-footer .btn,
-    #editCountdownModal .modal-footer .btn {
-        width: 100%;
-        min-width: 0;
-        margin: 0 !important;
-        padding-right: 0.75rem !important;
-        padding-left: 0.75rem !important;
     }
 }
 
@@ -155,11 +113,6 @@
 
     .countdown-card-body {
         padding: 0.85rem !important;
-        row-gap: 0.75rem;
-    }
-
-    .countdown-card-header {
-        gap: 0.55rem;
     }
 
     .countdown-title {
@@ -170,17 +123,9 @@
         font-size: 0.78rem !important;
     }
 
-    .countdown-card-actions {
-        gap: 0.4rem !important;
-    }
-
     .countdown-card-actions .btn {
         width: 1.55rem;
         height: 1.55rem;
-    }
-
-    .countdown-timer {
-        gap: 0.35rem !important;
     }
 
     .time-box {
@@ -195,10 +140,6 @@
         font-size: 0.56rem;
     }
 
-    #addCountdownModal .modal-footer,
-    #editCountdownModal .modal-footer {
-        grid-template-columns: 1fr;
-    }
 }
 
 

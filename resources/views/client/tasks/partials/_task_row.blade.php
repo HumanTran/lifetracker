@@ -12,7 +12,7 @@
     $showDeadline = $showDeadline ?? true;
 @endphp
 
-<tr class="border-bottom task-row-item task-record-item"
+<tr class="border-bottom task-row-item"
     id="task-row-{{ $task->id }}"
     data-role="task"
     data-task-id="{{ $task->id }}"
@@ -31,7 +31,7 @@
     </td>
 
     <td class="fw-medium text-dark task-cell-title">
-        <span class="task-title-text" id="task-title-text-{{ $task->id }}">{{ $task->title }}</span>
+        <span class="task-title-text d-block text-truncate" id="task-title-text-{{ $task->id }}">{{ $task->title }}</span>
     </td>
 
     @include('client.tasks.partials._task_row_tag', ['task' => $task, 'tags' => $tags, 'displayTagName' => $displayTagName])

@@ -18,9 +18,7 @@ body {
 }
 
 .auth-page {
-    width: 100%;
     min-height: 100dvh;
-    padding: 1.5rem;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -28,7 +26,6 @@ body {
 .auth-card {
     width: min(100%, 420px);
     max-width: 420px;
-    padding: 1.75rem;
 }
 
 .auth-card-signup {
@@ -45,11 +42,6 @@ body {
     width: 58px;
     height: 58px;
     flex: 0 0 auto;
-}
-
-.auth-card .form-control,
-.auth-card .btn {
-    width: 100%;
 }
 
 .auth-login-meta,

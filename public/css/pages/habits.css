@@ -21,7 +21,6 @@ body {
     cursor: pointer;
     border: 1px solid transparent;
     transition: background-color 0.15s ease, border-color 0.15s ease;
-    column-gap: 1.5rem;
 }
 
 .habit-row:hover {
@@ -60,16 +59,6 @@ body {
 .habit-actions-wrap .btn {
     width: 28px;
     height: 28px;
-    text-decoration: none;
-    border-bottom: 0;
-}
-
-.habit-actions-wrap .btn:hover,
-.habit-actions-wrap .btn:focus,
-.habit-actions-wrap .btn:active {
-    text-decoration: none;
-    border-bottom: 0;
-    box-shadow: none;
 }
 
 .habit-history-card {
@@ -92,13 +81,8 @@ body {
     gap: 0.45rem;
 }
 
-.history-weekdays > div {
-    text-align: center;
-}
-
 .history-day-btn {
     min-height: 38px;
-    padding: 0;
     font-size: 0.86rem;
 }
 

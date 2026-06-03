@@ -1,5 +1,5 @@
 
-<div class="col-12 col-lg-6">
+<div class="col-12 col-xl-6">
             <div class="card border-0 shadow-sm rounded-4 bg-white h-100 overflow-hidden dashboard-habit-card">
                 <div class="card-body p-3">
                     <div class="dashboard-habit-header d-flex justify-content-between align-items-center mb-3">
@@ -38,7 +38,7 @@
                                         @endphp
 
                                         <button type="button"
-                                            class="btn btn-sm p-0 rounded-2 dashboard-habit-box {{ $isChecked ? 'btn-primary' : 'btn-outline-secondary' }}"
+                                            class="btn btn-sm p-0 rounded-2 d-inline-flex align-items-center justify-content-center dashboard-habit-box {{ $isChecked ? 'btn-primary' : 'btn-outline-secondary' }}"
                                             data-habit-id="{{ $habit->id }}"
                                             data-date="{{ $dateStr }}"
                                             title="{{ $day->format('d/m/Y') }}">

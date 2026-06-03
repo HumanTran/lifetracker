@@ -1,106 +1,4 @@
-﻿@media (min-width: 768px) and (max-width: 991.98px) {
-    #taskFilterForm {
-        display: grid !important;
-        grid-template-columns: 1fr;
-        align-items: stretch;
-    }
-
-    #taskFilterForm .task-filter-search,
-    #taskFilterForm > .d-flex {
-        width: 100%;
-    }
-
-    #taskFilterForm > .d-flex {
-        display: grid !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .task-filter-tag,
-    .task-filter-priority {
-        width: 100%;
-    }
-
-    .task-view-toolbar {
-        display: grid !important;
-        grid-template-columns: 1fr auto;
-        align-items: center;
-    }
-
-    .task-date-controls {
-        grid-column: 1 / -1;
-        justify-content: start;
-        margin-left: 0 !important;
-    }
-
-    .task-add-top-btn {
-        justify-self: end;
-    }
-
-    .task-card-fields {
-        grid-template-columns: 1.1fr 0.9fr;
-    }
-}
-
 @media (max-width: 767.98px) {
-    .task-page-card .card-body {
-        padding: 1rem;
-    }
-
-    #taskFilterForm {
-        display: grid !important;
-        grid-template-columns: 1fr;
-        gap: 0.7rem;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-    }
-
-    #taskFilterForm .input-group,
-    #taskFilterForm select,
-    .task-filter-search,
-    .task-filter-tag,
-    .task-filter-priority {
-        width: 100%;
-        min-width: 0;
-    }
-
-    #taskFilterForm > .d-flex {
-        display: grid !important;
-        grid-template-columns: 1fr;
-        gap: 0.65rem;
-        width: 100%;
-    }
-
-    .task-view-toolbar {
-        display: grid !important;
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
-        align-items: stretch;
-    }
-
-    .task-view-toolbar .btn-group,
-    .task-add-top-btn {
-        width: 100%;
-    }
-
-    .task-view-toolbar .btn-group .btn {
-        flex: 1 1 0;
-    }
-
-    .task-date-controls {
-        display: grid !important;
-        grid-template-columns: 38px minmax(0, 1fr) 38px auto;
-        gap: 0.45rem;
-        width: 100%;
-        margin-left: 0 !important;
-    }
-
-    .task-date-controls #dailyDate {
-        width: 100%;
-        min-width: 0;
-        height: 36px;
-        font-size: 0.85rem;
-    }
-
     #taskListArea {
         overflow: visible;
     }
@@ -110,63 +8,12 @@
         min-width: min(220px, calc(100vw - 2.5rem));
         overflow-wrap: anywhere;
     }
-
-    #taskPaginationArea {
-        display: grid !important;
-        grid-template-columns: 1fr;
-        align-items: start;
-        gap: 0.75rem;
-    }
-}
-
-@media (max-width: 430px) {
-    .task-card-fields {
-        grid-template-columns: 1fr;
-    }
-
-    .task-card .task-priority-pill,
-    .task-card .task-tag-pill {
-        width: 100%;
-    }
-
-    .task-card .dropdown {
-        width: 100%;
-    }
 }
 
 @media (max-width: 390px) {
-    .task-page-card .card-body {
-        padding: 0.85rem;
-    }
-
-    .task-date-controls {
-        grid-template-columns: 34px minmax(0, 1fr) 34px;
-    }
-
-    .task-date-controls [data-action="go-today"] {
-        grid-column: 1 / -1;
-        width: 100%;
-    }
-
-    .task-card {
-        padding: 0.8rem;
-        gap: 0.75rem;
-    }
-
-    .task-card-header {
-        grid-template-columns: 24px minmax(0, 1fr);
-    }
-
-    .task-card-actions {
-        grid-column: 1 / -1;
-        justify-self: end;
-    }
-
     .task-action-btn,
     .task-cell-actions .btn {
         width: 32px;
         height: 32px;
     }
 }
-
-

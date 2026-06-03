@@ -4,32 +4,12 @@
     overflow: visible;
 }
 
-#adminUserFilterForm {
-    gap: 1rem;
-}
-
-.admin-user-filter-search {
-    width: min(360px, 100%);
-}
-
-.admin-user-filter-actions {
-    align-items: center;
-    min-width: 0;
-}
-
 .admin-user-filter-role,
 .admin-user-filter-status {
-    width: 170px;
-}
-
-.admin-users-table-wrap {
-    max-width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
+    min-width: 170px;
 }
 
 .admin-users-table {
-    width: 100%;
     min-width: 860px;
     table-layout: fixed;
 }
@@ -60,10 +40,6 @@
     vertical-align: middle;
 }
 
-.admin-user-mobile-label {
-    display: none;
-}
-
 .admin-user-name,
 .admin-user-email {
     overflow: hidden;
@@ -72,7 +48,6 @@
 }
 
 .admin-user-select {
-    width: 100%;
     min-width: 0;
     min-height: 38px;
 }
@@ -93,134 +68,22 @@
     border-color: #fca5a5;
 }
 
-.admin-user-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .admin-delete-btn {
     width: 38px;
     height: 38px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     flex: 0 0 auto;
-    padding: 0;
-}
-
-.admin-users-card-list {
-    display: grid;
-    gap: 0.85rem;
-    min-width: 0;
-}
-
-.admin-user-card,
-.admin-users-empty-card {
-    border: 1px solid #e2e8f0;
-    border-radius: 0.9rem;
-    background: #ffffff;
-    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
-}
-
-.admin-user-card {
-    display: grid;
-    gap: 0.85rem;
-    min-width: 0;
-    padding: 0.95rem;
-}
-
-.admin-users-empty-card {
-    padding: 1.25rem;
-    color: #64748b;
-    font-style: italic;
-    text-align: center;
-}
-
-.admin-user-card-header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 40px;
-    gap: 0.75rem;
-    align-items: start;
-}
-
-.admin-user-card-identity {
-    min-width: 0;
-}
-
-.admin-user-card-name {
-    margin: 0;
-    color: #0f172a;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.35;
-    overflow-wrap: anywhere;
-}
-
-.admin-user-card-email {
-    margin-top: 0.2rem;
-    color: #64748b;
-    font-size: 0.875rem;
-    line-height: 1.35;
-    overflow: hidden;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-.admin-user-card-delete-form {
-    justify-self: end;
-    margin-right: 0.1rem !important;
-}
-
-.admin-user-card-controls {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.75rem;
 }
 
 .admin-user-card-field {
     min-width: 0;
 }
 
-.admin-user-card-label {
-    display: block;
-    margin-bottom: 0.25rem;
-    color: #64748b;
-    font-size: 0.76rem;
-    font-weight: 700;
-}
-
-.admin-user-card-login {
-    display: grid;
-    grid-template-columns: 120px minmax(0, 1fr);
-    gap: 0.5rem;
-    align-items: center;
-}
-
-.admin-user-card-login .admin-user-card-label {
-    margin-bottom: 0;
-}
-
-.admin-user-card-login-value {
-    color: #0f172a;
-    font-size: 0.9rem;
-    font-weight: 600;
-    min-width: 0;
-    overflow-wrap: anywhere;
-}
-
 #adminUsersPaginationArea {
     min-width: 0;
 }
 
-#adminUsersPaginationArea .custom-pagination {
-    flex-wrap: wrap;
-    gap: 0.35rem;
-}
-
 #adminUsersPaginationArea .page-link {
     min-width: 2.25rem;
-    text-align: center;
 }
 
 .admin-user-page-loading {
@@ -241,10 +104,5 @@
 
 #addAdminModal .modal-body {
     overflow-y: auto;
-}
-
-#addAdminModal .form-control,
-#addAdminModal .form-select {
-    width: 100%;
 }
 

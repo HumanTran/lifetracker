@@ -38,7 +38,7 @@
                     </div>
                 </div>
 
-                <div class="modal-footer border-top-0 px-4 pb-4 pt-0">
+                <div class="modal-footer border-top-0 px-4 pb-4 pt-0 d-grid d-sm-flex justify-content-sm-end gap-2">
                     <button type="button" class="btn btn-light fw-medium px-4" data-bs-dismiss="modal">
                         Hủy
                     </button>

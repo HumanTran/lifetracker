@@ -12,7 +12,7 @@ function showCountdownEmptyStateIfNeeded() {
 
     if (!hasItems && !emptyState) {
         list.insertAdjacentHTML('beforeend', `
-                        <div class="col-12 text-center py-5 countdown-empty-state" id="countdownEmptyState">
+                        <div class="col-12 text-center py-5 d-flex flex-column align-items-center justify-content-center countdown-empty-state" id="countdownEmptyState">
                             <i class="fa-solid fa-stopwatch text-muted opacity-25 mb-3 countdown-empty-icon"></i>
                             <h5 class="text-muted fw-bold">Chưa có sự kiện nào</h5>
                             <p class="text-muted small">Hãy thêm một mốc thời gian để bắt đầu đếm ngược nhé!</p>
@@ -67,19 +67,19 @@ function updateAllCountdownTimers() {
         const messageBox = document.getElementById('msg-' + eventId);
 
         if (distance < 0) {
-            timer.style.display = 'none';
+            timer.classList.add('d-none');
 
             if (messageBox) {
-                messageBox.style.display = 'block';
+                messageBox.classList.add('is-visible');
             }
 
             return;
         }
 
-        timer.style.display = '';
+        timer.classList.remove('d-none');
 
         if (messageBox) {
-            messageBox.style.display = 'none';
+            messageBox.classList.remove('is-visible');
         }
 
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));

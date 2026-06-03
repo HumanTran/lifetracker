@@ -1,6 +1,6 @@
 
-<div class="col-12 col-lg-6">
-            <div class="card border-0 shadow-sm rounded-4 bg-white h-100 dashboard-today-card">
+<div class="col-12 col-xl-6">
+            <div class="card border-0 shadow-sm rounded-4 bg-white h-100">
                 <div class="card-body p-3">
                     <div class="mb-3">
                         <h6 class="fw-bold text-dark mb-2">Công việc hôm nay</h6>
@@ -11,7 +11,7 @@
                         </a>
                     </div>
 
-                    <div id="dashboardTodayTaskList" class="dashboard-scroll-list">
+                    <div id="dashboardTodayTaskList">
                         @forelse($todayDashboardTasks as $task)
                             @php
                                 $firstTag = $task->tag;
@@ -32,14 +32,14 @@
                                 };
                             @endphp
 
-                            <div class="dashboard-task-item d-grid gap-2 py-2 border-bottom"
+                            <div class="dashboard-task-item d-grid align-items-center gap-2 py-2 border-bottom"
                                 data-task-id="{{ $task->id }}">
-                                <div class="dashboard-task-main d-flex align-items-center gap-2 min-w-0">
+                                <div class="dashboard-task-main d-flex align-items-center gap-2 overflow-hidden">
                                     <input type="checkbox"
                                         class="form-check-input dashboard-task-checkbox shadow-none flex-shrink-0"
                                         data-task-id="{{ $task->id }}" {{ $isDone ? 'checked' : '' }}>
 
-                                    <div class="min-w-0">
+                                    <div class="overflow-hidden">
                                         <div class="dashboard-task-title fw-semibold small {{ $isDone ? 'text-decoration-line-through text-muted' : 'text-dark' }}">
                                             {{ $task->title }}
                                         </div>
@@ -52,7 +52,7 @@
                                     </div>
                                 </div>
 
-                                <span class="badge dashboard-priority-pill {{ $priorityClass }} rounded-3 px-2 py-1">
+                                <span class="badge dashboard-priority-pill {{ $priorityClass }} rounded-3 px-2 py-1 text-center mw-100 text-wrap">
                                     {{ $priorityText }}
                                 </span>
                             </div>

@@ -71,7 +71,7 @@ class DatabaseSeeder extends Seeder
                 'user_id' => $users[0]->id,
                 'tag_id' => $studyTag->id,
                 'title' => 'Hoàn thành báo cáo đồ án',
-                'status' => 'doing',
+                'status' => 'pending',
                 'priority' => 'high',
                 'due_date' => Carbon::today()->toDateString(),
                 'created_at' => now(),

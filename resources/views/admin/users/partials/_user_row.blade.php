@@ -20,12 +20,11 @@
     data-user-status="{{ $normalizedStatus }}"
     data-user-name="{{ \Illuminate\Support\Str::lower($user->name) }}"
     data-user-email="{{ \Illuminate\Support\Str::lower($user->email) }}">
-    <td class="text-muted fw-semibold admin-user-id-cell">
-        <span class="admin-user-mobile-label">ID</span>
+    <td class="text-muted fw-semibold">
         <span class="admin-user-id-value">#{{ $user->id }}</span>
     </td>
 
-    <td class="admin-user-main-cell">
+    <td>
         <div class="fw-semibold text-dark admin-user-name">
             {{ $user->name }}
         </div>
@@ -35,11 +34,9 @@
         </div>
     </td>
 
-    <td class="admin-user-role-cell">
-        <span class="admin-user-mobile-label">Vai trò</span>
-
+    <td>
         <form action="{{ route('admin.users.update', $user->id) }}" method="POST"
-            class="m-0 ajax-admin-user-update-form admin-user-field-form">
+            class="m-0 ajax-admin-user-update-form">
             @csrf
             @method('PUT')
 
@@ -53,11 +50,9 @@
         </form>
     </td>
 
-    <td class="admin-user-status-cell">
-        <span class="admin-user-mobile-label">Trạng thái</span>
-
+    <td>
         <form action="{{ route('admin.users.update', $user->id) }}" method="POST"
-            class="m-0 ajax-admin-user-update-form admin-user-field-form">
+            class="m-0 ajax-admin-user-update-form">
             @csrf
             @method('PUT')
 
@@ -71,9 +66,7 @@
         </form>
     </td>
 
-    <td class="small admin-user-login-cell">
-        <span class="admin-user-mobile-label">Đăng nhập cuối</span>
-
+    <td class="small">
         @if($lastLogin)
             <div class="admin-user-login-value">
                 <div class="fw-medium text-dark admin-login-date">
@@ -89,15 +82,15 @@
         @endif
     </td>
 
-    <td class="text-center admin-user-actions-cell">
-        <div class="admin-user-actions">
+    <td class="text-center">
+        <div class="admin-user-actions d-flex justify-content-center align-items-center">
             <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST"
                 class="m-0 ajax-admin-user-delete-form">
                 @csrf
                 @method('DELETE')
 
                 <button type="submit"
-                    class="btn btn-sm btn-light border text-danger admin-delete-btn"
+                    class="btn btn-sm btn-light border text-danger d-inline-flex align-items-center justify-content-center p-0 admin-delete-btn"
                     aria-label="Xóa người dùng {{ $user->name }}">
                     <i class="fa-solid fa-trash"></i>
                 </button>

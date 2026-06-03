@@ -5,16 +5,16 @@
     const name = escapeTaskHtml(tag.name);
 
     return `
-        <li class="task-tag-option-row px-2" data-tag-option-id="${id}">
-            <a class="dropdown-item small fw-medium text-muted rounded-2 flex-grow-1" href="#"
+        <li class="task-tag-option-row d-flex align-items-center gap-1 px-2" data-tag-option-id="${id}">
+            <a class="dropdown-item small fw-medium text-muted rounded-2 flex-grow-1 d-flex align-items-center" href="#"
                 data-action="update-tag" data-task-id="" data-tag-name="${name}">
                 <span class="text-truncate">${name}</span>
             </a>
-            <button type="button" class="btn btn-sm task-tag-manage-btn text-muted"
+            <button type="button" class="btn btn-sm task-tag-manage-btn text-muted p-0 d-inline-flex align-items-center justify-content-center rounded-2"
                 data-action="prompt-edit-tag" data-tag-id="${id}" data-tag-name="${name}" title="Sửa tag">
                 <i class="fa-solid fa-pen"></i>
             </button>
-            <button type="button" class="btn btn-sm task-tag-manage-btn text-danger"
+            <button type="button" class="btn btn-sm task-tag-manage-btn text-danger p-0 d-inline-flex align-items-center justify-content-center rounded-2"
                 data-action="delete-tag" data-tag-id="${id}" data-tag-name="${name}" title="Xóa tag">
                 <i class="fa-solid fa-trash"></i>
             </button>

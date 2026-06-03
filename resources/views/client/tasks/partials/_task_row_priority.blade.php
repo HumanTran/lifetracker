@@ -9,7 +9,7 @@
             <i class="fa-solid fa-chevron-down opacity-50"></i>
         </span>
 
-        <ul class="dropdown-menu task-priority-menu border-0 shadow rounded-3 py-2">
+        <ul class="dropdown-menu task-priority-menu bg-white border shadow rounded-3 py-2">
             <li>
                 <a class="dropdown-item task-priority-option priority-high small fw-medium" href="#"
                     data-action="update-inline" data-task-id="{{ $task->id }}" data-field="priority" data-value="high" data-label="Cao" data-bg="bg-danger" data-text="text-danger" data-border="border-danger-subtle">

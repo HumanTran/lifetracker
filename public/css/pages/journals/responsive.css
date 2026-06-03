@@ -1,35 +1,4 @@
-﻿@media (min-width: 992px) and (max-width: 1199.98px) {
-    #mainSidebar ~ .main-container .journal-page-row {
-        row-gap: 1rem !important;
-    }
-
-    #mainSidebar ~ .main-container .journal-list-col,
-    #mainSidebar ~ .main-container .journal-editor-col {
-        flex: 0 0 100% !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    #mainSidebar ~ .main-container .journal-editor-col {
-        order: -1;
-    }
-
-    #mainSidebar ~ .main-container #editor-container {
-        height: 300px !important;
-        min-height: 300px !important;
-    }
-}
-
-@media (max-width: 991.98px) {
-    .journal-page-row {
-        --bs-gutter-y: 1rem;
-        row-gap: 1rem !important;
-    }
-
-    .journal-editor-col {
-        order: -1;
-    }
-
+@media (max-width: 1199.98px) {
     .journal-list-card,
     .journal-editor-card {
         height: auto !important;
@@ -76,23 +45,10 @@
         box-shadow: none !important;
     }
 
-    .journal-filter-row {
-        display: grid !important;
-        grid-template-columns: minmax(0, 1fr) auto auto;
-        gap: 0.5rem !important;
-        align-items: stretch !important;
-    }
-
     .journal-filter-row .btn,
     .journal-filter-row input[type="date"],
     .journal-filter-row a {
         min-height: 38px;
-    }
-
-    .journal-filter-row a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .ql-toolbar.ql-snow {
@@ -170,20 +126,8 @@
         line-height: 1.55 !important;
     }
 
-    .journal-editor-card .d-flex.justify-content-end {
-        justify-content: stretch !important;
+    .journal-editor-card .d-grid.justify-content-md-end {
         padding: 0 !important;
         margin-top: 0.25rem;
     }
-
-    .journal-editor-card .d-flex.justify-content-end .btn {
-        width: 100%;
-        min-height: 46px;
-        border-radius: 0.95rem !important;
-    }
-
-    .journal-pagination-wrap .custom-pagination {
-        justify-content: flex-start !important;
-    }
 }
-

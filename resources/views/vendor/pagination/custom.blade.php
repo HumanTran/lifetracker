@@ -28,17 +28,17 @@
     @endphp
 
     <nav aria-label="Pagination">
-        <ul class="pagination custom-pagination justify-content-end mb-0">
+        <ul class="pagination custom-pagination justify-content-start justify-content-sm-end flex-wrap gap-1 mw-100 mb-0">
             
             @if ($paginator->onFirstPage())
                 <li class="page-item disabled">
-                    <span class="page-link">
+                    <span class="page-link rounded-3 d-inline-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-chevron-left"></i>
                     </span>
                 </li>
             @else
                 <li class="page-item">
-                    <a class="page-link" href="{{ $paginator->previousPageUrl() }}" rel="prev">
+                    <a class="page-link rounded-3 d-inline-flex align-items-center justify-content-center" href="{{ $paginator->previousPageUrl() }}" rel="prev">
                         <i class="fa-solid fa-chevron-left"></i>
                     </a>
                 </li>
@@ -48,17 +48,17 @@
             @foreach ($pages as $index => $page)
                 @if ($index > 0 && $page - $pages[$index - 1] > 1)
                     <li class="page-item disabled">
-                        <span class="page-link pagination-ellipsis">...</span>
+                        <span class="page-link pagination-ellipsis rounded-3 d-inline-flex align-items-center justify-content-center bg-transparent border-0 shadow-none">...</span>
                     </li>
                 @endif
 
                 @if ($page === $current)
                     <li class="page-item active" aria-current="page">
-                        <span class="page-link">{{ $page }}</span>
+                        <span class="page-link rounded-3 d-inline-flex align-items-center justify-content-center">{{ $page }}</span>
                     </li>
                 @else
                     <li class="page-item">
-                        <a class="page-link" href="{{ $paginator->url($page) }}">{{ $page }}</a>
+                        <a class="page-link rounded-3 d-inline-flex align-items-center justify-content-center" href="{{ $paginator->url($page) }}">{{ $page }}</a>
                     </li>
                 @endif
             @endforeach
@@ -66,13 +66,13 @@
             
             @if ($paginator->hasMorePages())
                 <li class="page-item">
-                    <a class="page-link" href="{{ $paginator->nextPageUrl() }}" rel="next">
+                    <a class="page-link rounded-3 d-inline-flex align-items-center justify-content-center" href="{{ $paginator->nextPageUrl() }}" rel="next">
                         <i class="fa-solid fa-chevron-right"></i>
                     </a>
                 </li>
             @else
                 <li class="page-item disabled">
-                    <span class="page-link">
+                    <span class="page-link rounded-3 d-inline-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-chevron-right"></i>
                     </span>
                 </li>

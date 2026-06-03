@@ -146,20 +146,12 @@
     overflow-x: hidden;
 }
 
-.journal-pagination-wrap nav,
-.journal-pagination-wrap .custom-pagination {
+.journal-pagination-wrap nav {
     max-width: 100%;
-}
-
-.journal-pagination-wrap .custom-pagination {
-    flex-wrap: wrap;
-    gap: 0.35rem;
 }
 
 .journal-pagination-wrap .page-link {
     min-width: 2.25rem;
-    text-align: center;
-    border-radius: 0.65rem;
 }
 
 #journalDatePicker:hover {

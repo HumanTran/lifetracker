@@ -1,5 +1,5 @@
 
-<div class="col-lg-4 journal-list-col">
+<div class="col-12 col-xl-4 order-2 order-xl-1">
             <div class="card border-0 shadow-sm rounded-4 h-100 journal-list-card">
                 <div class="card-body p-4 d-flex flex-column">
 
@@ -17,20 +17,27 @@
                             <input type="text" name="search" class="form-control border-0 shadow-none"
                                 value="{{ request('search') }}" placeholder="Tìm nhật ký...">
                         </div>
-                        <div class="d-flex gap-2 journal-filter-row">
-                            <input type="date" name="date"
-                                class="form-control form-control-sm border shadow-sm text-muted rounded-3"
-                                value="{{ request('date') }}">
-                            <button type="submit"
-                                class="btn btn-dark btn-sm px-3 fw-medium shadow-sm rounded-3 journal-filter-btn">
-                                Lọc
-                            </button>
+                        <div class="row g-2 journal-filter-row">
+                            <div class="col-12 col-sm">
+                                <input type="date" name="date"
+                                    class="form-control form-control-sm border shadow-sm text-muted rounded-3"
+                                    value="{{ request('date') }}">
+                            </div>
+
+                            <div class="col-12 col-sm-auto d-grid">
+                                <button type="submit"
+                                    class="btn btn-dark btn-sm px-3 fw-medium shadow-sm rounded-3 journal-filter-btn">
+                                    Lọc
+                                </button>
+                            </div>
 
                             @if(request()->hasAny(['search', 'date']) && (request('search') != '' || request('date') != ''))
-                                <a href="{{ route('journals.index') }}"
-                                    class="btn btn-light btn-sm px-3 border text-danger rounded-3" title="Xóa bộ lọc">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </a>
+                                <div class="col-12 col-sm-auto d-grid">
+                                    <a href="{{ route('journals.index') }}"
+                                        class="btn btn-light btn-sm px-3 border text-danger rounded-3 d-inline-flex align-items-center justify-content-center" title="Xóa bộ lọc">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </a>
+                                </div>
                             @endif
                         </div>
                     </form>

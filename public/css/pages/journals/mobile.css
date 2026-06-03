@@ -104,10 +104,6 @@
     #action-buttons .btn {
         width: 38px;
         height: 38px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 !important;
         border-radius: 0.75rem !important;
     }
 
@@ -153,16 +149,6 @@
 
     .journal-editor-card #journalForm {
         padding: 0 0.85rem 0.85rem !important;
-    }
-
-    .journal-filter-row {
-        grid-template-columns: 1fr;
-    }
-
-    .journal-filter-row .btn,
-    .journal-filter-row input[type="date"],
-    .journal-filter-row a {
-        width: 100%;
     }
 
     .journal-create-btn {

@@ -14,40 +14,40 @@
 @endphp
 
 <article id="admin-user-card-{{ $user->id }}"
-    class="admin-user-card admin-user-record"
+    class="admin-user-card admin-user-record d-grid gap-3 p-3 border bg-white shadow-sm rounded-4"
     data-user-id="{{ $user->id }}"
     data-user-role="{{ $user->role }}"
     data-user-status="{{ $normalizedStatus }}"
     data-user-name="{{ \Illuminate\Support\Str::lower($user->name) }}"
     data-user-email="{{ \Illuminate\Support\Str::lower($user->email) }}">
-    <div class="admin-user-card-header">
-        <div class="admin-user-card-identity">
-            <h3 class="admin-user-card-name">{{ $user->name }}</h3>
-            <div class="admin-user-card-email">{{ $user->email }}</div>
+    <div class="row g-2 align-items-start">
+        <div class="col overflow-hidden">
+            <h3 class="h6 mb-0 fw-bold text-dark text-break">{{ $user->name }}</h3>
+            <div class="small text-secondary text-break mt-1">{{ $user->email }}</div>
         </div>
 
         <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST"
-            class="m-0 ajax-admin-user-delete-form admin-user-card-delete-form">
+            class="col-auto m-0 ajax-admin-user-delete-form">
             @csrf
             @method('DELETE')
 
             <button type="submit"
-                class="btn btn-sm btn-light border text-danger admin-delete-btn"
+                class="btn btn-sm btn-light border text-danger d-inline-flex align-items-center justify-content-center p-0 admin-delete-btn"
                 aria-label="Xóa người dùng {{ $user->name }}">
                 <i class="fa-solid fa-trash"></i>
             </button>
         </form>
     </div>
 
-    <div class="admin-user-card-controls">
+    <div class="row g-2 admin-user-card-controls">
         <form action="{{ route('admin.users.update', $user->id) }}" method="POST"
-            class="m-0 ajax-admin-user-update-form admin-user-card-field">
+            class="col-12 col-sm-6 m-0 ajax-admin-user-update-form admin-user-card-field">
             @csrf
             @method('PUT')
 
             <input type="hidden" name="status" value="{{ $normalizedStatus }}">
 
-            <label class="admin-user-card-label" for="admin-user-card-role-{{ $user->id }}">
+            <label class="d-block mb-1 text-secondary small fw-bold" for="admin-user-card-role-{{ $user->id }}">
                 Vai trò
             </label>
 
@@ -59,13 +59,13 @@
         </form>
 
         <form action="{{ route('admin.users.update', $user->id) }}" method="POST"
-            class="m-0 ajax-admin-user-update-form admin-user-card-field">
+            class="col-12 col-sm-6 m-0 ajax-admin-user-update-form admin-user-card-field">
             @csrf
             @method('PUT')
 
             <input type="hidden" name="role" value="{{ $user->role }}">
 
-            <label class="admin-user-card-label" for="admin-user-card-status-{{ $user->id }}">
+            <label class="d-block mb-1 text-secondary small fw-bold" for="admin-user-card-status-{{ $user->id }}">
                 Trạng thái
             </label>
 
@@ -77,15 +77,15 @@
         </form>
     </div>
 
-    <div class="admin-user-card-login">
-        <span class="admin-user-card-label">Đăng nhập cuối</span>
+    <div class="row g-1 g-sm-2 align-items-sm-center admin-user-card-login">
+        <span class="col-12 col-sm-4 mb-0 text-secondary small fw-bold">Đăng nhập cuối</span>
 
         @if($lastLogin)
-            <span class="admin-user-card-login-value">
+            <span class="col-12 col-sm text-dark small fw-semibold text-break">
                 {{ $lastLogin->format('d/m/Y') }} {{ $lastLogin->format('H:i') }}
             </span>
         @else
-            <span class="admin-user-card-login-value text-muted">Chưa có</span>
+            <span class="col-12 col-sm text-muted small fw-semibold text-break">Chưa có</span>
         @endif
     </div>
 </article>

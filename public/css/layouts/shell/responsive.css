@@ -71,12 +71,6 @@
         border-radius: 1rem !important;
     }
 
-    .custom-pagination {
-        justify-content: flex-start !important;
-        flex-wrap: wrap;
-        max-width: 100%;
-    }
-
     .modal.show {
         display: flex !important;
         align-items: center;
@@ -214,12 +208,6 @@
         white-space: normal;
     }
 
-    .lt-pagination-wrap {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0.65rem;
-        width: 100%;
-    }
 }
 
 @media (max-width: 390px) {

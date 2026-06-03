@@ -8,6 +8,7 @@ class Task extends Model
 {
     protected $fillable = ['user_id', 'tag_id', 'title', 'status', 'priority', 'due_date'];
 
+    //cast due_date thành dạng date
     protected function casts(): array
     {
         return [
@@ -15,6 +16,7 @@ class Task extends Model
         ];
     }
 
+    // 1 task chỉ có 1 tag
     public function tag()
     {
         return $this->belongsTo(Tag::class);

@@ -1,6 +1,6 @@
 
 <div class="col-12">
-            <div class="card border-0 shadow-sm rounded-4 bg-white h-100 dashboard-productivity-card">
+            <div class="card border-0 shadow-sm rounded-4 bg-white h-100">
                 <div class="card-body p-3">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h6 class="fw-bold text-dark mb-0">Năng suất 7 ngày qua</h6>

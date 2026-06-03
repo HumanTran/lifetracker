@@ -1,5 +1,5 @@
 
-<div class="col-lg-8 journal-editor-col">
+<div class="col-12 col-xl-8 order-1 order-xl-2">
             <div class="card border-0 shadow-sm rounded-4 h-100 journal-editor-card">
                 <div class="card-body px-4 pt-4 pb-2 flex-grow-0">
                     <div class="d-flex justify-content-between align-items-start mb-3 border-bottom pb-2">
@@ -28,7 +28,7 @@
                                 @csrf
                                 @method('DELETE')
 
-                                <button type="submit" class="btn btn-light text-danger border shadow-sm rounded-3">
+                                <button type="submit" class="btn btn-light text-danger border shadow-sm rounded-3 d-inline-flex align-items-center justify-content-center p-0">
                                     <i class="fa-regular fa-trash-can"></i>
                                 </button>
                             </form>
@@ -56,7 +56,7 @@
 
                     <input type="hidden" name="content" id="journalContent" required>
 
-                    <div class="d-flex justify-content-end px-4 pb-3">
+                    <div class="d-grid d-md-flex justify-content-md-end px-4 pb-3">
                         <button type="submit" class="btn btn-primary fw-bold px-4 shadow-sm rounded-3"
                             data-action="sync-content">
                             <i class="fa-solid fa-floppy-disk me-2"></i>Lưu nhật ký
